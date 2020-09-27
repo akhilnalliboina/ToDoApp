@@ -1,4 +1,4 @@
-import { Component, OnInit,EventEmitter,Output } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output } from '@angular/core';
 
 
 @Component({
@@ -8,16 +8,16 @@ import { Component, OnInit,EventEmitter,Output } from '@angular/core';
 })
 export class ToaddComponent implements OnInit {
   @Output() addRequest = new EventEmitter<any>();
-title:string;
+  title: string;
   constructor() { }
 
   ngOnInit(): void {
   }
-  onSubmit(){
+  onSubmit() {
     //create a object
-    const todo={
-      title:this.title,
-      completed:false
+    const todo = {
+      title: this.title,
+      completed: false
     }
     this.addRequest.emit(todo);
   }
